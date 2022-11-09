@@ -13,14 +13,16 @@
                 Source="stellis.jpg"
                 SemanticProperties.Description="Cute dot net bot waving hi to you!"
                 HeightRequest="200"
-                HorizontalOptions="Center" />
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
 
             <Label
                 x:Name="CatLabel"
                 Text=""
                 SemanticProperties.HeadingLevel="Level1"
                 FontSize="32"
-                HorizontalOptions="Center" />
+                HorizontalOptions="Center" 
+                FontFamily="Roboto"/>
 
             <BoxView
              x:Name="Laatikko"/>
