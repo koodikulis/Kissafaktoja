@@ -8,8 +8,17 @@
             Spacing="25"
             Padding="30,0"
             VerticalOptions="Center">
-            
-            
+
+            <Image Source="pixelcat.png"
+                   x:Name="pixelcat"
+                 Aspect="AspectFit"
+                 Margin="-20"
+                 HeightRequest="50"
+                 WidthRequest="50" 
+                  HorizontalOptions="Center"
+                   VerticalOptions="End"
+                   />
+
             <Image
                 
                 Source="stellis.jpg"
