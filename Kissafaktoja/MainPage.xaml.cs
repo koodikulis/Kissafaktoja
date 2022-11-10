@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System.Diagnostics;
 using System.Threading.Tasks;
 using TextCopy;
 
@@ -31,6 +32,14 @@ public partial class MainPage : ContentPage
 
 	private async void OnCopyClicked(object sender, EventArgs e)
 	{
-        await ClipboardService.SetTextAsync(CatLabel.Text);
+		try
+		{
+            await ClipboardService.SetTextAsync(CatLabel.Text);
+        }
+		catch (Exception ex)
+		{
+			Debug.WriteLine(ex, "MOBILE NOT SUPPORTED.");
+		}
+        
     }
 }
