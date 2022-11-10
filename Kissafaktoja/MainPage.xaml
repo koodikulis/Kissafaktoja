@@ -8,13 +8,16 @@
             Spacing="25"
             Padding="30,0"
             VerticalOptions="Center">
-
+            
+            
             <Image
+                
                 Source="stellis.jpg"
                 SemanticProperties.Description="Cute dot net bot waving hi to you!"
                 HeightRequest="200"
                 HorizontalOptions="Center"
-                VerticalOptions="Center"/>
+                VerticalOptions="Center"
+                />
 
             <Label
                 x:Name="CatLabel"
@@ -31,10 +34,18 @@
             <Button
                 x:Name="Catbtn"
                 Text="Get your cat fact!"
-                SemanticProperties.Hint="Counts the number of times you click"
+                SemanticProperties.Hint="Get's a random catfact from the api"
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Center" />
-            
+
+            <Button
+
+                x:Name="Copybtn"
+                Text="Copy to clipboard."
+                SemanticProperties.Hint="Copies catfact to clipboard."
+                Clicked="OnCopyClicked"
+                HorizontalOptions="Center" />
+
 
         </VerticalStackLayout>
     </ScrollView>
