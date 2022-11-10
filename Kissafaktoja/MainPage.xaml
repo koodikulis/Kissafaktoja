@@ -39,7 +39,7 @@
                 HorizontalOptions="Center" />
 
             <Button
-
+                
                 x:Name="Copybtn"
                 Text="Copy to clipboard."
                 SemanticProperties.Hint="Copies catfact to clipboard."

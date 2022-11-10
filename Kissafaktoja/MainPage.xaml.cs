@@ -11,7 +11,11 @@ public partial class MainPage : ContentPage
 	public MainPage()
 	{
 		InitializeComponent();
-	}
+        if (DeviceInfo.Current.Platform != DevicePlatform.WinUI)
+        {
+			Copybtn.IsVisible= false;
+        }
+    }
 
 	private async void OnCounterClicked(object sender, EventArgs e)
 	{
@@ -32,14 +36,15 @@ public partial class MainPage : ContentPage
 
 	private async void OnCopyClicked(object sender, EventArgs e)
 	{
-		try
-		{
-            await ClipboardService.SetTextAsync(CatLabel.Text);
-        }
-		catch (Exception ex)
-		{
-			Debug.WriteLine(ex, "MOBILE NOT SUPPORTED.");
-		}
-        
+	
+			try
+			{
+				await ClipboardService.SetTextAsync(CatLabel.Text);
+			}
+			catch (Exception ex)
+			{
+				Debug.WriteLine(ex, "MOBILE NOT SUPPORTED.");
+			}
+ 
     }
 }
