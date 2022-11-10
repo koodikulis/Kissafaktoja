@@ -14,7 +14,10 @@ public partial class MainPage : ContentPage
         {
             Copybtn.IsVisible = false;
         }
+
+        GetCatEvent += CatEvents.OnGetCatEvent;
     }
+
 
     private async void OnCounterClicked(object sender, EventArgs e)
     {
@@ -22,6 +25,9 @@ public partial class MainPage : ContentPage
         Cat kissa = JsonConvert.DeserializeObject<Cat>(responseBody);
         CatLabel.Text = kissa.fact;
         SemanticScreenReader.Announce(Catbtn.Text);
+        CatArgs catArgs = new CatArgs() { CatImage = pixelcat };
+        GetCatClick(catArgs);
+
     }
 
     private async Task<string> GetCatFact()
@@ -46,4 +52,12 @@ public partial class MainPage : ContentPage
         }
 
     }
+
+
+    public event EventHandler<CatArgs> GetCatEvent;
+    public void GetCatClick(CatArgs e)
+    {
+        GetCatEvent?.Invoke(this, e);
+    }
+
 }
