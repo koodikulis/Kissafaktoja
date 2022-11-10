@@ -2,4 +2,4 @@
 
 Small silly .maui project to test Public Apis and Newtonsoft.Json.
 
-CatImage taken by me and covnverted to 8bit with https://img8bit.com/.
+Cat Image taken by me and covnverted to 8bit with https://img8bit.com/.
