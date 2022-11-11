@@ -27,7 +27,7 @@
                 HorizontalOptions="Center"
                 VerticalOptions="Center"
                 />
-
+            <Frame>
             <Label
                 x:Name="CatLabel"
                 Text=""
@@ -35,9 +35,8 @@
                 FontSize="32"
                 HorizontalOptions="Center" 
                 FontFamily="Roboto"/>
-
-            <BoxView
-             x:Name="Laatikko"/>
+            </Frame>
+           
             
 
             <Button

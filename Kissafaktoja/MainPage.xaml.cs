@@ -25,14 +25,14 @@ public partial class MainPage : ContentPage
         Cat kissa = JsonConvert.DeserializeObject<Cat>(responseBody);
         CatLabel.Text = kissa.fact;
         SemanticScreenReader.Announce(Catbtn.Text);
-        CatArgs catArgs = new CatArgs() { CatImage = pixelcat };
+        CatArgs catArgs = new () { CatImage = pixelcat };
         GetCatClick(catArgs);
 
     }
 
     private async Task<string> GetCatFact()
     {
-        HttpClient client = new HttpClient();
+        HttpClient client = new ();
         HttpResponseMessage response = await client.GetAsync("https://catfact.ninja/fact");
         response.EnsureSuccessStatusCode();
         string responseBody = await response.Content.ReadAsStringAsync();
