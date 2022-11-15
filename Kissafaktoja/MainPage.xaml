@@ -55,6 +55,13 @@
                 HorizontalOptions="Center" />
 
 
+            <ImageButton
+              x:Name="favourite"
+              Source="star.png"
+               Clicked="favourite_Clicked"
+                HeightRequest="50"
+                />
+            
         </VerticalStackLayout>
     </ScrollView>
 

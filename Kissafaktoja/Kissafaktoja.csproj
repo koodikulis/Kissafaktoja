@@ -62,6 +62,7 @@
 	  <None Remove="Resources\Fonts\Roboto-Thin.ttf" />
 	  <None Remove="Resources\Fonts\Roboto-ThinItalic.ttf" />
 	  <None Remove="Resources\Images\PixelCat.png" />
+	  <None Remove="Resources\Images\star.png" />
 	</ItemGroup>
 
 	<ItemGroup>

@@ -16,8 +16,6 @@ namespace Kissafaktoja
     public class CatEvents
     {
 
-
-
         public static void OnGetCatEvent(object sender, CatArgs e)
         {
             

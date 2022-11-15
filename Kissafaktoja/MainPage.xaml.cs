@@ -24,7 +24,7 @@ public partial class MainPage : ContentPage
         string responseBody = await GetCatFact();
         Cat kissa = JsonConvert.DeserializeObject<Cat>(responseBody);
         CatLabel.Text = kissa.fact;
-        SemanticScreenReader.Announce(Catbtn.Text);
+        SemanticScreenReader.Announce(CatLabel.Text);
         CatArgs catArgs = new () { CatImage = pixelcat };
         GetCatClick(catArgs);
 
@@ -60,4 +60,11 @@ public partial class MainPage : ContentPage
         GetCatEvent?.Invoke(this, e);
     }
 
+    private void favourite_Clicked(object sender, EventArgs e)
+    {
+        if (CatLabel.Text != "")
+        {
+            Favourites.addFavouriteCatFact(CatLabel.Text);
+        }
+    }
 }
