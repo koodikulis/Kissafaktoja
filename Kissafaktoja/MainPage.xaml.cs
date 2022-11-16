@@ -25,14 +25,14 @@ public partial class MainPage : ContentPage
         Cat kissa = JsonConvert.DeserializeObject<Cat>(responseBody);
         CatLabel.Text = kissa.fact;
         SemanticScreenReader.Announce(CatLabel.Text);
-        CatArgs catArgs = new () { CatImage = pixelcat };
+        CatArgs catArgs = new() { CatImage = pixelcat };
         GetCatClick(catArgs);
 
     }
 
-    private async Task<string> GetCatFact()
+    private static async Task<string> GetCatFact()
     {
-        HttpClient client = new ();
+        HttpClient client = new();
         HttpResponseMessage response = await client.GetAsync("https://catfact.ninja/fact");
         response.EnsureSuccessStatusCode();
         string responseBody = await response.Content.ReadAsStringAsync();
@@ -66,5 +66,10 @@ public partial class MainPage : ContentPage
         {
             Favourites.addFavouriteCatFact(CatLabel.Text);
         }
+    }
+
+    private void favPage_Clicked(object sender, EventArgs e)
+    {
+        App.Current.MainPage = new NavigationPage(new FavouritesPage());
     }
 }

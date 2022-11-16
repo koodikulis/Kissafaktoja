@@ -71,4 +71,10 @@
 		<PackageReference Include="TextCopy" Version="6.2.0" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <MauiXaml Update="FavouritesPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
 </Project>

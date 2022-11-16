@@ -9,7 +9,7 @@ namespace Kissafaktoja
 {
     internal class Favourites
     {
-        public static List<string> listFavouriteCatFacts = new List<string>();
+        static List<string> listFavouriteCatFacts = new List<string>();
 
         //TODO: add a page to view favourites.
 
@@ -17,6 +17,11 @@ namespace Kissafaktoja
         {
             listFavouriteCatFacts.Add(fact);
             Debug.WriteLine("number of favourites: " + listFavouriteCatFacts.Count);
+        }
+
+        public static List<string> getListOfFavourites()
+        {
+            return listFavouriteCatFacts;
         }
     }
 }

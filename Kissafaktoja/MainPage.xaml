@@ -61,7 +61,14 @@
                Clicked="favourite_Clicked"
                 HeightRequest="50"
                 />
-            
+
+            <Button
+                x:Name="favPage"
+                Text="To Favourites!"
+                SemanticProperties.Hint="See your favourite facts"
+                Clicked="favPage_Clicked"
+                HorizontalOptions="Center" />
+
         </VerticalStackLayout>
     </ScrollView>
 
