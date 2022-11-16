@@ -60,11 +60,12 @@
               Source="star.png"
                Clicked="favourite_Clicked"
                 HeightRequest="50"
+                SemanticProperties.Hint="Favourite best facts."
                 />
 
             <Button
                 x:Name="favPage"
-                Text="To Favourites!"
+                Text="Favourites Page!"
                 SemanticProperties.Hint="See your favourite facts"
                 Clicked="favPage_Clicked"
                 HorizontalOptions="Center" />

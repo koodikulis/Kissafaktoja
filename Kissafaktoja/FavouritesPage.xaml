@@ -5,8 +5,20 @@
              Title="FavouritesPage">
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to .NET MAUI!"
+            x:Name="FavLabel"
+            Text=""
+            FontAttributes="Bold"
+            FontFamily="Roboto"
+            FontSize="16"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+
+
+        <Button
+        x:Name="GoBackBtn"
+        Text="To Mainpage"
+        Clicked="GoBackBtn_Clicked"
+        />
+        
     </VerticalStackLayout>
 </ContentPage>

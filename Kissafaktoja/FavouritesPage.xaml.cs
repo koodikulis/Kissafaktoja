@@ -12,8 +12,13 @@ public partial class FavouritesPage : ContentPage
 
         foreach (string item in listOfFavourites)
         {
-            Label label = new();
-            label.Text = item;
+
+            FavLabel.Text += item + "\n\n\n";
         }
+    }
+
+    private void GoBackBtn_Clicked(object sender, EventArgs e)
+    {
+        App.Current.MainPage = new NavigationPage(new MainPage());
     }
 }
