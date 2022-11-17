@@ -21,4 +21,11 @@ public partial class FavouritesPage : ContentPage
     {
         App.Current.MainPage = new NavigationPage(new MainPage());
     }
+
+    private void ClearBtn_Clicked(object sender, EventArgs e)
+    {
+
+        Favourites.clearFavs();
+        App.Current.MainPage = new NavigationPage(new FavouritesPage());
+    }
 }

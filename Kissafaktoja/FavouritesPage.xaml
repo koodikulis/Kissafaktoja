@@ -19,6 +19,12 @@
         Text="To Mainpage"
         Clicked="GoBackBtn_Clicked"
         />
-        
+
+        <Button
+            x:Name="ClearBtn"
+            Text="Clear Favourites"
+            Clicked="ClearBtn_Clicked"
+            />
+
     </VerticalStackLayout>
 </ContentPage>
