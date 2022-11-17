@@ -30,7 +30,7 @@
             <Frame>
             <Label
                 x:Name="CatLabel"
-                Text=""
+                Text="Hi. Press button below and get started."
                 SemanticProperties.HeadingLevel="Level1"
                 FontSize="32"
                 HorizontalOptions="Center" 
