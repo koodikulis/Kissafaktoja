@@ -34,15 +34,26 @@
                   HorizontalOptions="Center"
                    VerticalOptions="End"
                    />
-
-            <Image
+            <Frame 
                 Grid.Row="0"
-                Source="stellis.jpg"
-                SemanticProperties.Description="cat picture!"
-                HeightRequest="200"
+                Margin="10"
+                BorderColor="Black"
+                CornerRadius="250"
+                HeightRequest="250"
+                WidthRequest="250"
+                IsClippedToBounds="True"
                 HorizontalOptions="Center"
-                VerticalOptions="Center"
+                VerticalOptions="Center">
+                <Image
+                
+                Source="stellistwo.jpg"
+                SemanticProperties.Description="cat picture!"
+                 Aspect="AspectFill"
+                 Margin="-15"
+                 HeightRequest="250"
+                 WidthRequest="250"
                 />
+            </Frame>
             <Frame
                 Grid.Row="1">
             <Label

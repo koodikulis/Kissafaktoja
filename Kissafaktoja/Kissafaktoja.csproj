@@ -63,6 +63,7 @@
 	  <None Remove="Resources\Fonts\Roboto-ThinItalic.ttf" />
 	  <None Remove="Resources\Images\PixelCat.png" />
 	  <None Remove="Resources\Images\star.png" />
+	  <None Remove="Resources\Images\stellistwo.jpg" />
 	</ItemGroup>
 
 	<ItemGroup>
