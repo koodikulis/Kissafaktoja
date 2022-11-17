@@ -4,12 +4,28 @@
              x:Class="Kissafaktoja.MainPage">
 
     <ScrollView>
-        <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
 
-            <Image Source="pixelcat.png"
+        <Grid
+            Padding="80">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="300"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition  Height="50"/>
+                <RowDefinition  Height="100"/>
+                <RowDefinition  Height="50"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            
+      
+
+            <Image 
+                
+                Grid.Row="0"
+                Source="pixelcat.png"
                    x:Name="pixelcat"
                  Aspect="AspectFit"
                  Margin="-20"
@@ -20,26 +36,30 @@
                    />
 
             <Image
-                
+                Grid.Row="0"
                 Source="stellis.jpg"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                SemanticProperties.Description="cat picture!"
                 HeightRequest="200"
                 HorizontalOptions="Center"
                 VerticalOptions="Center"
                 />
-            <Frame>
+            <Frame
+                Grid.Row="1">
             <Label
+                
                 x:Name="CatLabel"
-                Text="Hi. Press button below and get started."
+                Text="Hi. Press button and get started."
                 SemanticProperties.HeadingLevel="Level1"
                 FontSize="32"
                 HorizontalOptions="Center" 
                 FontFamily="Roboto"/>
+                
             </Frame>
            
             
 
             <Button
+                Grid.Row="2"
                 x:Name="Catbtn"
                 Text="Get your cat fact!"
                 SemanticProperties.Hint="Get's a random catfact from the api"
@@ -47,7 +67,7 @@
                 HorizontalOptions="Center" />
 
             <Button
-                
+                Grid.Row="3"
                 x:Name="Copybtn"
                 Text="Copy to clipboard."
                 SemanticProperties.Hint="Copies catfact to clipboard."
@@ -56,6 +76,7 @@
 
 
             <ImageButton
+                Grid.Row="4"
               x:Name="favourite"
               Source="star.png"
                Clicked="favourite_Clicked"
@@ -64,13 +85,14 @@
                 />
 
             <Button
+                Grid.Row="5"
                 x:Name="favPage"
                 Text="Favourites Page!"
                 SemanticProperties.Hint="See your favourite facts"
                 Clicked="favPage_Clicked"
                 HorizontalOptions="Center" />
 
-        </VerticalStackLayout>
+        </Grid>
     </ScrollView>
 
 </ContentPage>

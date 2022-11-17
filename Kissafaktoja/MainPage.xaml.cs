@@ -62,7 +62,7 @@ public partial class MainPage : ContentPage
 
     private void favourite_Clicked(object sender, EventArgs e)
     {
-        if (CatLabel.Text != "")
+        if (CatLabel.Text != "Hi. Press button and get started.")
         {
             Favourites.addFavouriteCatFact(CatLabel.Text);
         }
