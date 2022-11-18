@@ -9,6 +9,6 @@ namespace Kissafaktoja
     public class Cat
     {
        public string fact { get; set; }
-        public int lenght { get; set; }
+       public int lenght { get; set; }
     }
 }

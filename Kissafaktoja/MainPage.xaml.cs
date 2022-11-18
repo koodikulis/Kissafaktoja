@@ -6,7 +6,8 @@ namespace Kissafaktoja;
 
 public partial class MainPage : ContentPage
 {
-
+    int fontsizeSmall = 16;
+    int fontsizeNormal = 32;
     public MainPage()
     {
         InitializeComponent();
@@ -23,7 +24,20 @@ public partial class MainPage : ContentPage
     {
         string responseBody = await GetCatFact();
         Cat kissa = JsonConvert.DeserializeObject<Cat>(responseBody);
-        CatLabel.Text = kissa.fact;
+        Debug.WriteLine(kissa.fact.Length);
+        
+        if (kissa.fact.Length > 130)
+        {
+            CatLabel.FontSize = fontsizeSmall;
+            CatLabel.Text = kissa.fact;
+        }
+        else
+        {
+            CatLabel.FontSize = fontsizeNormal;
+            CatLabel.Text = kissa.fact;
+        }
+
+        
         SemanticScreenReader.Announce(CatLabel.Text);
         CatArgs catArgs = new() { CatImage = pixelcat };
         GetCatClick(catArgs);
