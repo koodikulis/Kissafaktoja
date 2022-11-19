@@ -1,13 +1,15 @@
 ﻿using Newtonsoft.Json;
 using System.Diagnostics;
 using TextCopy;
+using Plugin.Maui.Audio;
 
 namespace Kissafaktoja;
 
 public partial class MainPage : ContentPage
 {
     int fontsizeSmall = 16;
-    int fontsizeNormal = 32;
+    int fontsizeNormal = 24;
+    
     public MainPage()
     {
         InitializeComponent();
@@ -26,7 +28,7 @@ public partial class MainPage : ContentPage
         Cat kissa = JsonConvert.DeserializeObject<Cat>(responseBody);
         Debug.WriteLine(kissa.fact.Length);
         
-        if (kissa.fact.Length > 130)
+        if (kissa.fact.Length > 125)
         {
             CatLabel.FontSize = fontsizeSmall;
             CatLabel.Text = kissa.fact;
@@ -85,5 +87,20 @@ public partial class MainPage : ContentPage
     private void favPage_Clicked(object sender, EventArgs e)
     {
         App.Current.MainPage = new NavigationPage(new FavouritesPage());
+    }
+
+    private async void pixelcat_Clicked(object sender, EventArgs e)
+    {
+        try
+        {
+            var audioPlayer = AudioManager.Current.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("catpurr.wav"));
+
+            audioPlayer.Play();
+           
+        }
+        catch (Exception evirhe)
+        {
+            Debug.WriteLine("Soundplayer failure" + evirhe);
+        }
     }
 }

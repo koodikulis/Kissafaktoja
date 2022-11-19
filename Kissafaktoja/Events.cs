@@ -9,7 +9,7 @@ namespace Kissafaktoja
 {
     public class CatArgs
     {
-        public Image CatImage { get; set; } 
+        public ImageButton CatImage { get; set; } 
         
     }
 
